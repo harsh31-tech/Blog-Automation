@@ -6,7 +6,10 @@ async def main():
     client = Client("src/blog_automation/server/server.py")
 
     async with client:
-        print("server and client is connected")
+        print("Client connected to MCP server")
+
+        result = await client.list_tools()
+        print(result)
 
 
 if __name__ == "__main__":
