@@ -1,51 +1,37 @@
-# Test Resource
+# {{title}}
 
-## Student Information
+{{introduction}}
 
-Name: Harsh Agarwal
+## {{section_1_heading}}
 
-Course: B.Tech CSE (AI)
+{{section_1_content}}
 
-## Skills
+## {{section_2_heading}}
 
-- JavaScript
-- Python
-- React
-- Node.js
-- MCP
+{{section_2_content}}
 
-## Current Learning
+## {{section_3_heading}}
 
-1. MCP
-2. FastMCP
-3. LLM integration
-4. Agentic AI
+{{section_3_content}}
 
-<!-- 
-# Blog Writing Instructions
+{{additional_sections}}
 
-## Purpose
+## Examples
 
-Write a clear and beginner-friendly technical blog post.
+{{examples_content}}
 
-## Writing Style
+## How to Get Started
 
-- Use simple English.
-- Explain technical concepts step by step.
-- Avoid unnecessary jargon.
-- Use practical examples.
-- Keep paragraphs short.
-- Use headings and subheadings.
-- Include code examples when useful.
+{{get_started_content}}
 
-## Blog Structure
+## Key Takeaways
 
-Every blog should follow this structure:
+{{key_takeaways}}
 
-1. Introduction
-2. What is the concept?
-3. Why is it useful?
-4. How does it work?
-5. Practical example
-6. Common mistakes
-7. Conclusion -->
+## Further Reading
+
+{{deeper_resources_content}}
+
+---
+
+{{closing_note}}
