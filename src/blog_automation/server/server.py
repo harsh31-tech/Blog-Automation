@@ -14,9 +14,31 @@ async def add(a: int, b: int) -> int:
     "resource://blog_template",
     description="use this blog template to generate the blog structure",
 )
+@mcp.resource(
+    "resource://writing_guidelines",
+    description="use this writing guideline to generate the blog content",
+)
+@mcp.resource(
+    "resource://examples//",
+    description="use this example to take reference for generating the blog",
+)
 async def blog_template():
     file_path = Path("resources/blog_template.md")
     return file_path.read_text(encoding="utf-8")
+
+
+@mcp.prompt
+def blog_generation(topic: str) -> str:
+    return f"""  Generate a technical blog about the provided topic.
+ {topic}
+Use:
+- the blog template
+- the writing guidelines
+- the example blogs
+
+Follow the required Markdown structure and writing style.
+Keep technical claims accurate.
+Return only the completed blog."""
 
 
 if __name__ == "__main__":
