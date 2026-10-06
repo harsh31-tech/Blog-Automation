@@ -10,11 +10,19 @@ async def main():
 
         # result = await client.list_tools()
         # print(result)
-        
+
         resource = await client.list_resources()
-        read_resource = await client.read_resource("resource://blog_template")
+        # read_resource = await client.read_resource("resource://blog_template")
         print(resource)
-        print(read_resource[0].text)
+        # print(read_resource[0].text)
+
+        blog_generation = await client.list_prompts()
+        print(blog_generation)
+
+        blog_prompt = await client.get_prompt(
+            "blog_generation", {"topic": "How JWT authentication works in Node.js"}
+        )
+        print(blog_prompt)
 
 
 if __name__ == "__main__":
