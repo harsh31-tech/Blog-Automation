@@ -10,7 +10,7 @@ client = OpenAI(
 )
 
 response = client.chat.completions.create(
-    model="qwen/qwen3.8-27b:free",
+    model="apodex/apodex-1.1-mini:free",
     messages=[
         {
             "role" : "user",

@@ -5,11 +5,6 @@ import asyncio
 mcp = FastMCP(name="Blog_Automation")
 
 
-@mcp.tool
-async def add(a: int, b: int) -> int:
-    return a + b
-
-
 @mcp.resource(
     "resource://blog_template",
     description="use this blog template to generate the blog structure",
@@ -22,18 +17,31 @@ async def blog_template():
     "resource://writing_guidelines",
     description="use this writing guideline to generate the blog content",
 )
+async def writing_guidelines():
+    file_path = Path("resources/writing_guidelines.md")
+    return file_path.read_text(encoding="utf-8")
+
 @mcp.resource(
     "resource://examples/triz-problem-solving",
     description="use this example to take reference for generating the blog",
 )
+async def example1():
+    file_path = Path("resources/examples/triz-problem-solving.md")
+    return file_path.read_text(encoding="utf-8")
 @mcp.resource(
     "resource://examples/mcp-automation-architecture",
     description="use this example to take reference for generating the blog",
 )
+async def example2():
+    file_path = Path("resources/examples/mcp-automation-architecture.md")
+    return file_path.read_text(encoding="utf-8")
 @mcp.resource(
     "resource://examples/llm-prompt-engineering",
     description="use this example to take reference for generating the blog",
 )
+async def example3():
+    file_path = Path("resources/examples/llm-prompt-engineering.md")
+    return file_path.read_text(encoding="utf-8")
 
 
 
